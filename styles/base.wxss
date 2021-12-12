@@ -1,0 +1,72 @@
+.fec {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.fsbc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fsc {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ml20 {
+  margin-left: 20rpx;
+}
+
+.mb20 {
+  margin-bottom: 20rpx;
+}
+
+.mt20 {
+  margin-top: 20rpx;
+}
+
+.mt200 {
+  margin-top: 200rpx;
+}
+
+.mt10 {
+  margin-top: 10rpx;
+}
+.c999 {
+  color: #999999;
+}
+
+.c333 {
+  color: #333;
+}
+
+.c666 {
+  color: #666;
+}
+
+.c4700 {
+  color: #ff4700;
+}
+
+.cTH {
+  color: var(--themeColor);
+}
+
+.fs30 {
+  font-style: 30rpx;
+}
+
+.fs36 {
+  font-style: 36rpx;
+}
+
+.fs40 {
+  font-size: 40rpx;
+}
+
+.fs50 {
+  font-size: 50rpx;
+}

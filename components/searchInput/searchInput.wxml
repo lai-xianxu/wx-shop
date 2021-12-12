@@ -1,0 +1,8 @@
+<view class="container_box">
+    <navigator class="fcc" url="/pages/search/index" hover-class="none" open-type="navigate">
+      搜索
+    </navigator>
+      
+  </view>
+    
+    

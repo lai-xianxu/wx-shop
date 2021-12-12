@@ -1,0 +1,68 @@
+page {
+  padding-bottom: 90rpx;
+  background-color: #f7f7f7;
+}
+.revice_address_row {
+  margin: 20rpx;
+}
+.revice_address_row .address_btn {
+  padding: 20rpx;
+}
+.revice_address_row .address_btn button {
+  width: 60%;
+}
+.revice_address_row .user_info_row {
+  display: flex;
+  padding: 30rpx 20rpx;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rpx;
+}
+.revice_address_row .user_info_row .user_info {
+  flex: 5;
+}
+view .van-card__bottom {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+view s.van-swipe-cell {
+  width: 100%;
+}
+view .van-card {
+  border-radius: 30rpx;
+  margin: 0 30rpx 0 20rpx;
+  width: 710rpx;
+  background-color: #fff;
+}
+.cart_chk_wrap {
+  width: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom-button {
+  width: 500rpx;
+  height: 100rpx;
+}
+.van-empty {
+  height: 850rpx;
+}
+.van-empty .van-empty__image {
+  width: 500rpx;
+  height: 500rpx;
+}
+.van-empty .van-button--round {
+  width: 400rpx;
+  height: 90rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 36rpx;
+}
+.van-card__content {
+  margin-left: 20rpx;
+}
+.van-card__img {
+  border-radius: 20rpx;
+}

@@ -1,0 +1,41 @@
+<view class="container_box">
+  <van-tabs active="{{ active }}" bind:change="onChange" color="#a1d6d4">
+    <van-tab name="0" title="收藏的店铺"></van-tab>
+    <van-tab name="1" title="收藏的商品">
+      <view class="btn_tabs fsc mt20">
+        <van-button class="ml20" type="primary">全部</van-button>
+        <van-button class="ml20" type="info">热卖中</van-button>
+        <van-button class="ml20" type="warning">即将上线</van-button>
+      </view>
+      <block wx:for="{{ collect }}" wx:key="item.id">
+        <van-swipe-cell right-width="{{ 65 }}" class="mt20">
+          <van-card
+            price="{{ item.basicInfo.minPrice }}"
+            desc="{{ item.basicInfo.characteristic }}"
+            title="{{ item.basicInfo.name }}"
+            thumb="{{ item.basicInfo.pic }}"
+            thumb-mode="aspectFill"
+            num="{{ item.num }}"
+          >
+          </van-card>
+          <view
+            slot="right"
+            bindtap="delItemShop"
+            data-id="{{ item.basicInfo.id }}"
+            >删除</view
+          >
+        </van-swipe-cell>
+      </block>
+    </van-tab>
+    <van-tab name="2" title="关注的商品"></van-tab>
+    <van-tab name="3" title="我的足迹"></van-tab>
+  </van-tabs>
+
+  <view wx:if="{{active != 1}}" class="mt200">
+    <van-empty
+        class="custom-image"
+        image="https://img.yzcdn.cn/vant/custom-empty-image.png"
+        description="暂无商品~"
+    />
+</view>
+</view>

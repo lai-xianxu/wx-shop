@@ -1,0 +1,74 @@
+<view class="container_box">
+  <!-- 顶部搜索框 -->
+  <searchInput></searchInput>
+  <!-- 轮播图 -->
+  <view class="swiper_box">
+    <swiper autoplay circular indicator-dots>
+      <swiper-item
+      wx:for="{{ swiperList }}"
+      wx:key="id"
+      >
+        <navigator>
+          <image mode="widthFix" src="{{item.picUrl}}"/>
+        </navigator>
+      </swiper-item>    
+    </swiper>
+  </view>
+
+  <!-- 分类列表 -->
+  <view class="category_box">
+    <view class="category_item_box" wx:for="{{ categoory }}" wx:key="id" bindtap="jumpCategory" data-id="{{item.id}}" data-index="{{index}}">
+      <view class="category_item">
+        <image mode="widthFix" src="{{item.icon}}"/>
+        <view>
+          {{item.name}}
+        </view>
+      </view> 
+    </view>
+  </view>
+
+  <!-- 商品列表 -->
+  <view class="goods_box">
+    <view class="goods_title">
+      <text class="left"></text>
+      <text class="center">商品列表</text>
+      <text class="right"></text>
+    </view>
+    <view class="goods_list">
+      <!-- 左列 -->
+      <view class="gl_left">
+        <view class="item_box" wx:for="{{goodsListLeft}}" wx:key="id">
+          <navigator url="/pages/goods_detail/index?id={{item.id}}" open-type="navigate">
+            <image class="gl_item_img" src="{{item.pic}}" mode="aspectFill" lazy-load="true"/>
+            <view class="gl_item_con">
+              <view class="item_con_title">{{item.name}}</view>
+              <view class="item_con_text">
+                ￥{{item.originalPrice}}
+              </view>
+            </view>
+          </navigator>
+            
+        </view>
+      </view>
+      <!-- 右列 -->
+      <view class="gl_right">
+        <view class="item_box">
+          <navigator url="/pages/goods_detail/index?id={{goodsListright[0].id}}" open-type="navigate">
+          <image class="gl_item_img2" src="{{goodsListright[0].pic}}" mode="aspectFill" lazy-load="true"/>
+        </navigator>
+        </view>
+        <view class="item_box" wx:for="{{goodsListright}}" wx:key="id" wx:if="{{index !== 0}}">
+          <navigator url="/pages/goods_detail/index?id={{item.id}}" open-type="navigate">
+            <image class="gl_item_img" src="{{item.pic}}" mode="aspectFill" lazy-load="true"/>
+            <view class="gl_item_con">
+              <view class="item_con_title">{{item.name}}</view>
+              <view class="item_con_text">
+                ￥{{item.originalPrice}}
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

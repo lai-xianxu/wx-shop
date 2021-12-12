@@ -1,0 +1,66 @@
+<view class="container_box">
+  <!-- 收货地址 -->
+  <!-- <view class="revice_address_row"> -->
+    <!-- 当收货地址 不存在 按钮显示  对象 空对象 bool类型也是true  -->
+    <!-- <view class="address_btn" wx:if="{{ !address.userName }}">
+      <button bindtap="handleChooseAddress" type="primary" plain>
+        获取收货地址
+      </button>
+    </view> -->
+    <!-- 当收货地址 存在 详细信息就显示 -->
+    <!-- <view wx:else class="user_info_row" bindtap="handleChooseAddress">
+      <view class="iconfont icon-dingwei fs50 c4700"></view>
+      <view class="user_info ml20">
+        <view class="fsc">{{ address.userName }} 
+          <view class="c999 ml20">
+            {{ address.telNumber }}
+          </view>
+        </view>
+        <view class="mt10">{{ address.all }}</view>
+      </view>
+      <view class="iconfont icon-youjiantou fs40 c999"></view>
+    </view>
+  </view> -->
+
+  <view class="c999 mb20 ml20 mt20">
+    共{{cart.length}}件宝贝
+  </view>
+    
+  <!-- 无商品内容时占位 -->
+  <van-empty wx:if="{{!cart.length}}" description="购物车竟然是空的" class="custom-image"
+  image="https://crm-1253803335.file.myqcloud.com/img/20211205/95748b259ce071b8.png?imageView2/1/w/720/h/1440">
+    <van-button round type="danger" class="bottom-button" bindtap="goHome">去逛逛</van-button>
+  </van-empty>
+
+  <!-- 加购的商品信息 -->
+  <block wx:else>
+    <view class="fsc shop_item_box" wx:for="{{cart}}" wx:key="basicInfo.id">
+      <!-- 复选框 -->
+      <view class="cart_chk_wrap ml20">
+        <checkbox-group data-id="{{item.basicInfo.id}}" bindchange="handeItemChange">
+          <checkbox checked="{{item.checked}}" class="checkbox"></checkbox>
+        </checkbox-group>
+      </view>
+      <van-swipe-cell right-width="{{ 65 }}">
+        <van-card
+          price="{{item.basicInfo.minPrice}}"
+          desc="{{item.basicInfo.characteristic}}"
+          title="{{item.basicInfo.name}}"
+          thumb="{{item.basicInfo.pic}}"
+          thumb-mode="aspectFill"
+        >
+          <view slot="num">
+            <van-stepper value="{{ item.num }}" bind:change="handleItemNumEdit" data-id="{{item.basicInfo.id}}"/>
+          </view>
+        </van-card>
+        <view slot="right" bindtap="delItemShop"  data-id="{{item.basicInfo.id}}">删除</view>
+      </van-swipe-cell>
+    </view>
+  </block>
+    
+
+  <!-- 底部结算 -->
+  <van-submit-bar price="{{ totalPrices * 100 }}" button-text="结算({{totalNum}})" tip="{{ true }}" bind:submit="handlePay">
+    <van-checkbox checked-color="#f44" value="{{ allChecked }}" bindtap="handleItemAllCheck">全选</van-checkbox>
+  </van-submit-bar>
+</view>

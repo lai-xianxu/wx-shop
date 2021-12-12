@@ -1,0 +1,17 @@
+page {
+  background-color: #f7f7f7;
+}
+.box {
+  width: 100%;
+}
+.box .search_item {
+  background-color: #fff;
+  font-size: 26rpx;
+  padding: 22rpx 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  border-radius: 20rpx;
+  margin: 10rpx 20rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

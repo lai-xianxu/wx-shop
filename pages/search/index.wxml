@@ -1,0 +1,34 @@
+<view class="caontainer_box">
+  <van-search
+    value="{{ value }}"
+    placeholder="请输入搜索关键词"
+    use-action-slot
+    shape="round"
+    clearable
+    bind:search="bindChange"
+    bind:change="bindChange"
+    bind:clear="clearInput"
+  >
+    <view slot="action" bind:tap="handleInput" data-value="{{ value }}"
+      >搜索</view
+    >
+  </van-search>
+  <van-transition
+    show="{{ isFocus }}"
+    custom-class="block"
+    name="fade-up"
+    duration="{{ { enter: 600, leave: 600 } }}"
+  >
+    <view class="box mt20">
+      <navigator
+        url="/pages/goods_detail/index?id={{ item.id }}"
+        class="search_item fsc"
+        wx:for="{{ goods }}"
+        wx:key="id"
+      >
+        <view class="iconfont icon-sousuo c999 fs30"></view>
+        <view class="title ml20 c666">{{ item.name }}</view>
+      </navigator>
+    </view>
+  </van-transition>
+</view>

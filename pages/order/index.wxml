@@ -1,0 +1,35 @@
+<view class="container_box">
+    <van-tabs active="{{ active }}" bind:change="onChange" color="#a1d6d4">
+        <van-tab name="0" title="待付款"></van-tab>
+        <van-tab name="1" title="待发货"></van-tab>
+        <van-tab name="2" title="待收货"></van-tab>
+        <van-tab name="3" title="退款/退货"></van-tab>
+    </van-tabs>
+    <view wx:if="{{active != 0 || !orderList.length}}" class="mt200">
+        <van-empty
+            class="custom-image"
+            image="https://img.yzcdn.cn/vant/custom-empty-image.png"
+            description="暂无订单~"
+        />
+    </view>
+    <block wx:if="{{active == 0}}">
+        <block wx:for="{{orderList}}" wx:key="item.id">
+            <van-card
+                num="{{item.goodsNumber}}"
+                tag="{{item.statusStr}}"
+                price="{{item.amountReal}}.00"
+                desc="收货地址：{{item.address.address}}"
+                title="{{item.goods.goodsName}}"
+                thumb="{{item.goods.pic}}"
+                thumb-mode="aspectFill"
+                >
+                <view slot="footer">
+                    <van-button>取消订单</van-button>
+                    <!-- <van-button size="mini">按钮</van-button> -->
+                </view>
+            </van-card>
+        </block>
+    </block>
+      
+      
+</view>

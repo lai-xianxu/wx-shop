@@ -1,0 +1,19 @@
+{
+  "name": "wm-shop",
+  "version": "1.0.0",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.9.2",
+    "apifm-wxapi": "^3.42.0"
+  },
+  "description": ""
+}

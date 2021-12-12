@@ -1,0 +1,119 @@
+page {
+  padding-bottom: 90rpx;
+  background-color: #f7f7f7;
+}
+.revice_address_row {
+  margin-bottom: 30rpx;
+  .address_btn {
+    padding: 20rpx;
+    button {
+      width: 60%;
+    }
+  }
+  .user_info_row {
+    display: flex;
+    padding: 20rpx;
+    background: #fff;
+    border-radius: 10rpx;
+    justify-content: center;
+    align-items: center;
+    .user_info {
+      flex: 5;
+    }
+  }
+}
+
+.shop_item_box {
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin: 0 20rpx 20rpx;
+}
+view .van-card__bottom {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+view s.van-swipe-cell {
+  width: 100%;
+}
+
+.van-swipe-cell__left,
+.van-swipe-cell__right {
+  display: inline-block;
+  align-items: center;
+  width: 130rpx;
+  height: auto;
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 208rpx;
+  text-align: center;
+  background-color: #f44;
+  border-radius: 20rpx;
+}
+
+view .van-card {
+  border-radius: 30rpx;
+  margin: 0 30rpx 0 0;
+  width: 600rpx;
+  background-color: #fff;
+  .van-card__desc {
+    margin-top: 10rpx;
+  }
+}
+
+.cart_chk_wrap {
+  width: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-button {
+  width: 500rpx;
+  height: 100rpx;
+}
+
+.van-empty {
+  height: 850rpx;
+  .van-empty__image {
+    width: 500rpx;
+    height: 600rpx;
+  }
+  .van-button--round {
+    width: 400rpx;
+    height: 90rpx;
+    text-align: center;
+    line-height: 80rpx;
+    font-size: 36rpx;
+  }
+}
+
+.van-card__img {
+  border-radius: 20rpx;
+}
+/* 重写 checkbox 样式 */
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input {
+  border-radius: 50%; /* 圆角 */
+  width: 46rpx; /* 背景的宽 */
+  height: 46rpx; /* 背景的高 */
+}
+/* 选中后的 背景样式*/
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  border: 1rpx solid #f3333e;
+  background: #f3333e;
+}
+// 选中后的 对勾样式
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  border-radius: 50%;
+  width: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 30rpx; /* 对勾大小 30rpx */
+  color: #fff; /* 对勾颜色 白色 */
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}

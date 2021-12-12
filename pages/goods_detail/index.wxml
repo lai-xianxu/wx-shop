@@ -1,0 +1,51 @@
+<view class="container_box">
+    <!-- 轮播图 -->
+  <view class="swiper_box">
+    <swiper autoplay circular indicator-dots>
+      <swiper-item
+        wx:for="{{goodsObj.pics}}"
+        wx:key="id"
+        bindtap="handlePrevewImage"
+        data-url="{{item.pic}}"
+      >
+        <navigator>
+          <image mode="widthFix" src="{{item.pic}}"/>
+        </navigator>
+      </swiper-item>    
+    </swiper>
+  </view>
+  <view class="goods_price">￥{{goodsObj.goods_price}}</view>
+
+  <!-- 标题栏 -->
+  <view class="goods_name_row">
+    <view class="goods_name">{{goodsObj.goods_name}}</view>
+    <!-- bindtap="handleCollect"  -->
+    <view class="goods_collect" bindtap="handleCollect">
+      <text class="iconfont  {{isCollect?'icon-shoucang1':'icon-shoucang2'}}"></text>
+      <view class="collect_text">收藏</view>
+    </view>
+  </view>
+
+  <!-- 图文详情 -->
+  <view class="goods_info">
+    <view class="goods_info_title">图文详情</view>
+    <view class="goods_info_content">
+      <!-- 富文本 -->
+    <!-- {{goodsObj.goods_introduce}} -->
+      <rich-text is="wxParse" nodes="{{goodsDetail}}"></rich-text>
+    </view>
+  </view>
+
+  <!-- 底部操作栏 -->
+  <van-goods-action>
+    <van-goods-action-icon icon="chat-o" text="客服" open-type="contact" />
+    <van-goods-action-icon icon="share-o" text="分享" open-type="share" />
+    <van-goods-action-icon icon="cart-o" text="购物车" bind:click="handleJumpCart" link-type="switchTab"/>
+    <van-goods-action-button
+      text="加入购物车"
+      type="warning"
+      bind:click="handleAddCart"
+    />
+    <van-goods-action-button text="立即购买" bind:click="onClickButton" />
+  </van-goods-action>
+</view>

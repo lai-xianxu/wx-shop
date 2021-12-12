@@ -1,0 +1,54 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "分类",
+                    "pathName": "pages/category/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "详情",
+                    "pathName": "pages/goods_detail/index",
+                    "query": "id=1001102",
+                    "scene": null
+                },
+                {
+                    "name": "支付",
+                    "pathName": "pages/pay/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "购物车",
+                    "pathName": "pages/cart/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "我的",
+                    "pathName": "pages/user/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "搜索",
+                    "pathName": "pages/search/index",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

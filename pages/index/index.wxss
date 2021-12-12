@@ -1,0 +1,102 @@
+.swiper_box swiper {
+  width: 750rpx;
+  height: 340rpx;
+}
+.swiper_box swiper image {
+  width: 100%;
+}
+.category_box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30rpx;
+}
+.category_box .category_item_box {
+  flex: 1;
+}
+.category_box .category_item_box .category_item {
+  width: 150rpx;
+  margin-top: 20rpx;
+  text-align: center;
+  display: inline-block;
+  overflow: hidden;
+}
+.category_box .category_item_box .category_item image {
+  width: 80rpx;
+  height: 80rpx;
+}
+.goods_box {
+  margin-top: 30rpx;
+}
+.goods_box .goods_title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+  background-color: #fff;
+  padding-bottom: 30rpx;
+}
+.goods_box .goods_title .left,
+.goods_box .goods_title .right {
+  width: 140rpx;
+  height: 1rpx;
+  background-color: #d3d0d0;
+}
+.goods_box .goods_title .left {
+  margin-right: 20rpx;
+}
+.goods_box .goods_title .right {
+  margin-left: 20rpx;
+}
+.goods_box .goods_list {
+  padding: 0 20rpx 20rpx;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.goods_box .goods_list .gl_left,
+.goods_box .goods_list .gl_right {
+  flex: 1;
+}
+.goods_box .goods_list .gl_left .item_box,
+.goods_box .goods_list .gl_right .item_box {
+  width: 340rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+.goods_box .goods_list .gl_left .item_box .gl_item_img,
+.goods_box .goods_list .gl_right .item_box .gl_item_img {
+  width: 100%;
+  height: 400rpx !important;
+}
+.goods_box .goods_list .gl_left .item_box .gl_item_img2,
+.goods_box .goods_list .gl_right .item_box .gl_item_img2 {
+  width: 340rpx;
+  height: 260rpx !important;
+}
+.goods_box .goods_list .gl_left .item_box .gl_item_con,
+.goods_box .goods_list .gl_right .item_box .gl_item_con {
+  padding: 10rpx 20rpx 10rpx;
+}
+.goods_box .goods_list .gl_left .item_box .gl_item_con .item_con_title,
+.goods_box .goods_list .gl_right .item_box .gl_item_con .item_con_title {
+  font-size: 28rpx;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.goods_box .goods_list .gl_left .item_box .gl_item_con .item_con_text,
+.goods_box .goods_list .gl_right .item_box .gl_item_con .item_con_text {
+  color: #ff4700;
+  margin-top: 10rpx;
+}
+.goods_box .goods_list .gl_left {
+  padding-right: 10rpx;
+}
+.goods_box .goods_list .gl_right {
+  padding-left: 10rpx;
+}

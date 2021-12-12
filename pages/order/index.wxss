@@ -1,0 +1,19 @@
+.van-empty__image {
+  width: 260rpx !important;
+  height: 260rpx !important;
+}
+view .van-card__bottom {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+view .van-card {
+  border-radius: 30rpx;
+  margin: 20rpx 30rpx 0;
+}
+view .van-card .van-card__desc {
+  margin-top: 10rpx;
+}
+.van-card__img {
+  border-radius: 20rpx;
+}

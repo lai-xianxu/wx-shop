@@ -1,0 +1,48 @@
+<view class="container_box">
+  <!-- 收货地址 -->
+  <view class="revice_address_row">
+    <!-- 当收货地址 不存在 按钮显示  对象 空对象 bool类型也是true  -->
+    <view class="address_btn" wx:if="{{ !address.userName }}">
+      <button bindtap="handleChooseAddress" type="primary" plain>
+        获取收货地址
+      </button>
+    </view>
+    <!-- 当收货地址 存在 详细信息就显示 -->
+    <view wx:else class="user_info_row" bindtap="handleChooseAddress">
+      <view class="iconfont icon-dingwei fs50 c4700"></view>
+      <view class="user_info ml20">
+        <view class="fsc"
+          >{{ address.userName }}
+          <view class="c999 ml20">
+            {{ address.telNumber }}
+          </view>
+        </view>
+        <view class="mt10">{{ address.all }}</view>
+      </view>
+      <view class="iconfont icon-youjiantou fs40 c999"></view>
+    </view>
+  </view>
+
+  <!-- 加购的商品信息 -->
+  <view class="mb20 fsc" wx:for="{{ cart }}" wx:key="basicInfo.id">
+    <van-swipe-cell>
+      <van-card
+        price="{{ item.basicInfo.minPrice }}"
+        desc="{{ item.basicInfo.characteristic }}"
+        title="{{ item.basicInfo.name }}"
+        thumb="{{ item.basicInfo.pic }}"
+        num="{{ item.num }}"
+      >
+      </van-card>
+    </van-swipe-cell>
+  </view>
+
+  <!-- 底部结算 -->
+  <van-submit-bar
+    price="{{ totalPrices * 100 }}"
+    button-text="结算({{ totalNum }})"
+    tip="{{ true }}"
+    bind:submit="handleOrderPay"
+  >
+  </van-submit-bar>
+</view>
