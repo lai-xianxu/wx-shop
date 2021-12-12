@@ -24,8 +24,6 @@
 
 进入到后台管理后，在首页可以查看自己的域名，初始域名为一串字符串，这样不好看的同时用着也不顺畅，可以修改为自己喜欢的字符。
 
-![](https://s2.ax1x.com/2020/02/20/3mynld.png)
-
 然后使用api工厂的域名拼接自己的子域名在加上接口地址，就可以访问数据了。
 
 比如我的轮播图：https://api.it120.cc/jump/banner/list
@@ -59,35 +57,6 @@
    - 订单列表页，可以根据不同的订单状态查看对应的订单信息
 
 
-
-
-#### 修改：
-
-1. 商品分类
-
-   <img src="https://s2.ax1x.com/2020/02/24/3GJEi8.png" style="zoom:67%;" />
-
-2. 购物车默认提示
-
-   ![](https://s2.ax1x.com/2020/02/24/3GJuss.png)
-
-3. 登录授权页面
-
-   ![](https://s2.ax1x.com/2020/02/24/3GJYz4.png)
-
-4. 主题背景
-
-   ![](https://s2.ax1x.com/2020/02/24/3GJBo6.png)
-
-
-
-以上就是完成接口数据的替换了，如想要在开发工具中校验合法域名，
-
-<img src="https://s2.ax1x.com/2020/02/21/3m2bIP.png" style="zoom: 50%;" />
-
-或者想要发布小程序的话，需要在微信开发者设置合法域名https://api.it120.cc，具体如下。
-
-<img src="https://s2.ax1x.com/2020/02/21/3m2W8O.png" style="zoom: 50%;" />
 
 
 1. 使用[apifm-wxapi](https://github.com/gooking/apifm-wxapi) 模块来请求数据，写法比原先的request方法更简洁，注释掉之前的request请求代码，可以直观的看到代码量的减少。这样优化可以使项目体积减少一点，[apifm-wxapi接口文档](https://github.com/gooking/apifm-wxapi/blob/master/instructions.md) 。
