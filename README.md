@@ -26,7 +26,7 @@
 
 然后使用api工厂的域名拼接自己的子域名在加上接口地址，就可以访问数据了。
 
-比如我的轮播图：https://api.it120.cc/jump/banner/list
+比如我的轮播图：https://api.it120.cc/lemo/banner/list
 
 在浏览器中就可以打开并返回数据。
 

@@ -7,7 +7,7 @@ export const request = (params) => {
         mask: true
     })
 
-    const baseUrl = 'https://api.it120.cc/jump'
+    const baseUrl = 'https://api.it120.cc/lemo'
     return new Promise ((resolve,reject) => {
         wx.request({
             ...params,

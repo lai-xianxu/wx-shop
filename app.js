@@ -26,6 +26,6 @@ App({
 
   },
   globalData: {
-    subDomain: "jump"
+    subDomain: "lemo"
   }
 });
